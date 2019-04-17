@@ -1,0 +1,28 @@
+@charset "UTF-8";
+h1 {
+	color: red;
+}
+
+.box{
+	
+	border: 2px solid black;
+	background-color: #8c8c8c;
+	margin-top: 20px;
+	margin-left: 20px;
+	width: 200px;
+	height: 50px;
+	text-align: center;
+	padding: 30px;
+	border-radius: 20px;
+	
+	
+	
+}
+
+.box input {
+	
+	width: 120px;
+	height: 20px;
+
+	
+}

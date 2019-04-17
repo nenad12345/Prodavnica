@@ -7,6 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 
 @Entity
@@ -16,19 +17,16 @@ public class User {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
+	
 	private int idUser;
 	private String userName;
 	private String password;
 	private double balance;
-	
-	private List<product> listOfProduct = new ArrayList<product>();
+	@OneToMany
+	private List<Product> listOfProduct = new ArrayList<Product>();
 
 	public int getIdUser() {
 		return idUser;
-	}
-
-	public void setIdUser(int idUser) {
-		this.idUser = idUser;
 	}
 
 	public String getUserName() {
@@ -55,14 +53,18 @@ public class User {
 		this.balance = balance;
 	}
 
-	public List<product> getListOfProduct() {
+	public List<Product> getListOfProduct() {
 		return listOfProduct;
 	}
 
-	public void setListOfProduct(List<product> listOfProduct) {
+	public void setListOfProduct(List<Product> listOfProduct) {
 		this.listOfProduct = listOfProduct;
 	}
-	
+
+	public void setIdUser(int idUser) {
+		this.idUser = idUser;
+	}
+
 
 	
 }

@@ -16,5 +16,8 @@
         
 
         <mapping class="model.User" />
+        <mapping class="model.Product" />
+        <mapping class="model.Bill" />
+        
     </session-factory>
 </hibernate-configuration>
